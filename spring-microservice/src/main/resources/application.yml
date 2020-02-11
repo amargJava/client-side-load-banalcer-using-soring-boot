@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: testMicro
+      
+server:
+  port: 9092
