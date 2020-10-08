@@ -1,4 +1,4 @@
-apiVersion: apps/v3
+apiVersion: v3
 kind: Namespace
 metadata:
   name: dev
