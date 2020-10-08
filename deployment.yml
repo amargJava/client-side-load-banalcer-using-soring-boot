@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: namespace
+metadata:
+  name: dev
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-k8
+  labels:
+    app: test-k8
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: test-k8
+  template:
+    metadata:
+      labels:
+        app: test-k8
+    spec:
+      containers:
+      - name: test-k8
+        image: docker.io/ebixdocker/test-k8
+        ports:
+        - containerPort: 80
+
